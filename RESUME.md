@@ -1,5 +1,5 @@
 # Jennifer M. Andrade, MSN, APRN, FNP-C
-Lawai, HI | 808-557-3943 | jenniferandrade0808@gmail.com
+Lawai, HI | jenniferandrade0808@gmail.com
 
 ---
 
