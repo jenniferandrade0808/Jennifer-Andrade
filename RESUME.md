@@ -1,5 +1,4 @@
 # Jennifer M. Andrade, MSN, APRN, FNP-C
-Lawai, HI | jenniferandrade0808@gmail.com
 
 ---
 
