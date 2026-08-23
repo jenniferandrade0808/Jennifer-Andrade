@@ -13,7 +13,9 @@ trainer for Kauaʻi Search and Rescue.
 - Draft first, then I edit until it sounds like me — first drafts are a starting point, not a deliverable.
 - Flag assumptions instead of silently picking one.
 - Keep language direct and concrete; avoid filler and hedging.
-- [Add more of your own working preferences here]
+- Flag privacy and factual-accuracy concerns before committing personal information publicly.
+- Push back on vague or unsupported reasoning — name the actual mechanism rather than accepting a conclusion at face value.
+- Ask for confirmation before pushing to the public repo or other hard-to-reverse actions; local edits and read-only checks don't need a check-in.
 
 ## Standards for this repo
 - Every deliverable folder under `capabilities/` needs a `README.md`, `spec.md`, and the
