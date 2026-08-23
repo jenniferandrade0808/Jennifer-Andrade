@@ -32,11 +32,24 @@ Board-Certified Family Nurse Practitioner and retired U.S. Air Force Officer wit
 * Managed full-scope primary, occupational, and complex chronic care across the lifespan, including CDL physicals and post-acute rounds at local skilled nursing facilities.
 * Provided high-acuity emergency room stabilization, critical triage, and collaborative care for up to 4 simultaneous critical care/trauma patients.
 
-#### **Officer in Charge (OIC) Medical Readiness / Clinical Nurse (Captain)** | United States Air Force
-*2003 – 2026*
-* Directed statewide and national combat medical readiness for squadrons; served as lead medical planner for RIMPAC 2024 involving 24 partner nations.
-* Managed flight-care operations during 200+ deployed days as an Aeromedical Evacuation Medic with zero in-flight fatalities.
-* Maintained 100% accountability for $10M+ in specialized high-altitude life support equipment supporting global reconnaissance missions.
+#### **Clinical Nurse — Commissioned Officer (Reserves)** | United States Air Force
+*Jan 2023 – May 2026*
+* Officer in Charge of Medical Readiness — local and national readiness of USAF medics & nurses.
+* Clinical nurse responsible for patient staging, medical care, and stabilization between movement locations.
+* Lead organizer for RIMPAC 2024, a joint-service exercise with 24 countries, increasing US and HI readiness.
+
+#### **Aeromedical Evacuation Tech — Senior NCO (Reserves)** | United States Air Force
+*Aug 2012 – Dec 2022*
+* Medical Training Manager — ensured 100+ personnel were deployment-ready.
+* Additional Duty First Sergeant, supporting military personnel and families with complex issues.
+* Deployed 200+ days as a Flight Medic providing in-flight care for wounded warriors and DOD civilians/families, with zero fatalities.
+
+#### **Aerospace Physiology Technician — Active Duty** | United States Air Force
+*May 2003 – Aug 2012*
+* AED/CPR/First Aid instructor for 120+ military/DOD personnel.
+* Managed $10M+ in NASA equipment for USAF/Lockheed Martin High Altitude Reconnaissance operations.
+* Deployed 500+ days supporting the High Altitude Reconnaissance program (Global War on Terrorism).
+* Performed pre-flight physicals for U-2 pilots.
 
 ---
 
