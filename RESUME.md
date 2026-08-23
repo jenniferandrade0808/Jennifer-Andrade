@@ -49,4 +49,4 @@ Board-Certified Family Nurse Practitioner and retired U.S. Air Force Officer wit
 * Interdisciplinary Leadership & Readiness Training
 
 ---
-*AI Disclosure: This resume was condensed and formatted with the assistance of Gemini to meet markdown standards and one-page academic constraints.*
+*AI Disclosure: This resume was condensed and formatted with the assistance of Claude (Anthropic, 2026) to meet markdown standards and one-page academic constraints.*
