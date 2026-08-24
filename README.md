@@ -9,7 +9,7 @@ See [BIO.md](BIO.md) for the full biography and [RESUME.md](RESUME.md) for profe
 | Stage | Deliverable | Location | Status |
 |---|---|---|---|
 | 0 | Portfolio repository | this repo | Complete |
-| 1 | Engagement brief | [docs/briefs/](docs/briefs/) | In progress |
+| 1 | Engagement brief | [docs/briefs/](docs/briefs/) | Complete |
 | 2 | Spec, model, audit | [capabilities/marginal-analysis/](capabilities/marginal-analysis/) | Not started |
 | 3 | Analysis, memo, prompt log | [analysis/](analysis/), [docs/decisions/](docs/decisions/) | Not started |
 
