@@ -1,29 +1,31 @@
 <!-- PR TARGET: https://github.com/jenniferandrade0808/Jennifer-Andrade | Stage 1.1 (2.5 pts) -->
-# Stage 1.1 review — engagement brief · **97 / 100** (A+) · 2.43 / 2.5 pts
+# Stage 1.1 review — engagement brief · **99 / 100** (A+) · 2.48 / 2.5 pts
 
 **Brief:** [`docs/briefs/perfect-competition-brief.md`](https://github.com/jenniferandrade0808/Jennifer-Andrade/blob/main/docs/briefs/perfect-competition-brief.md)
 
-> Re-graded 2026-08-31 against your revised brief. Your previous score was 90. Both things I asked for are in, and one of them you did better than I described.
+> Re-graded 2026-09-02 against your 1 September revision. Your previous score was 97. You did the arithmetic I asked for and it is right to the dollar, and you tightened the problem statement in a way I did not ask for that is worth more than the arithmetic was.
 
 | Criterion | Earned | Notes |
 |---|---|---|
-| Problem restated in your own voice | 29 / 30 | Up from 28, and the gain is one clause: "Labor is the dominant cost driver rather than a binding limit." That distinction is the one this case turns on and almost nobody states it. Labor never runs out — the farm has 6,480 hours available and the optimum uses about 5,277 — so labor does not stop you the way a bed cap stops you. It just gets more expensive, and it is the price of labor that eventually makes a bed not worth planting. Cost driver, not constraint. Getting that separation into the problem statement before modeling is the difference between a brief that frames the analysis and one that describes the scenario. |
-| Hypothesis names a specific mix | 25 / 25 | 30 mesclun, 20 carrots, 10 tomatoes, with four beds deliberately empty and a stated reason for leaving them empty. Unchanged and still exactly what this criterion asks for. |
-| Economic mechanism | 24 / 25 | Up from 23. The mechanism is correct and now carries the whole argument: low diminishing-return rates let carrots and mesclun run to their caps without marginal cost overtaking price, while tomatoes stop early because "steep compounding labor penalties and flat fertilizer expenses" catch the price first. Naming the fertilizer cost as flat is a detail most people miss — it means fertilizer cannot be what stops a crop, which narrows the mechanism to labor by elimination. The last point is the same one as before: you say the eleventh tomato bed would be a loss and the case gives you everything you need to show it costs about $9,390 against $8,800 of revenue. One line of arithmetic turns the claim into evidence. |
-| Falsifiability and process | 19 / 20 | Up from 14, and this is the whole gain. Three conditions, each naming an observable and the claim it kills. The third one is a different species from the other two and worth pointing at: "I would know my explanation for the idle beds was wrong if raising the carrot or mesclun caps causes those 4 empty beds to fill up." That is not a prediction about the model's output — it is a designed experiment. You are proposing to change an input and watch a specific thing happen, which distinguishes two explanations that produce identical output under the original assumptions: either the beds are empty because nothing else is worth planting, or they are empty because the caps are in the way. Nothing else in this cohort's briefs separates two hypotheses that way. The remaining point is that none of the three carries a tolerance — "more than 10 beds to tomatoes" treats 11 and 18 as the same result, and they are not. |
-| **Final** | **97 / 100** | earned on merit |
+| Problem restated in your own voice | 30 / 30 | Up from 29, and full marks. The clause that does it: "it is the compounding price of labor — not a shortage of it — that eventually makes a bed not worth planting." Last time you had the distinction ("cost driver rather than a binding limit"); now you have said what the driver actually does. Labor never runs out here — 6,480 hours are available and the optimum uses about 5,277 — so nothing stops you the way a bed cap stops you. A bed stops being worth planting because the hour that plants it costs more than the bed returns. That is the sentence the whole case turns on and you are the only person in the cohort who has written it. |
+| Hypothesis names a specific mix | 25 / 25 | 30 mesclun, 20 carrots, 10 tomatoes, four beds deliberately empty, with a reason for the empty ones. Unchanged and still exactly what this criterion asks for. |
+| Economic mechanism | 25 / 25 | Up from 24, and this is where the point came from. You now price the specific bed: the eleventh tomato bed costs about $9,390 — marginal labor hours at the temporary-worker rate plus the flat $880 fertilizer — against $8,800 of revenue. I get $9,390.72, so you are right to the cent, and the way you got there is right too: the marginal hours for that bed are covered by temporary labor, because the farmer's 720 hours are long gone by the tenth tomato bed. Separating the flat fertilizer cost from the compounding labor cost in the same sentence is what makes it an argument instead of a number. |
+| Falsifiability and process | 19 / 20 | Unchanged at 19, and the reason is the one I named last time: none of the three conditions carries a tolerance. You added "indicating the diminishing returns penalty is milder than I projected," which sharpens what the observation would mean, but "more than 10 beds to tomatoes" still treats 11 and 18 as the same result and they are not. Your third condition is still the best falsification sentence in the cohort — it proposes an experiment rather than an outcome. |
+| **Final** | **99 / 100** | entered |
 
-### What changed
+### The one point left, and why i am still holding it back
 
-Your previous brief had a good problem statement, a committed mix, and a correct mechanism, and no statement of what would show it wrong. That was the whole gap and it cost six points.
+Put a band on the first condition before you build. Not after.
 
-Your commit message names the revision precisely — "Stage 1 revision per feedback: separate labor as cost driver from binding constraint, add falsification conditions" — and you logged the session separately. That is the sequence the stage wants: a brief with a before and an after, both in the history, so Stage 3 can point at what you believed and when.
+Right now "more than 10 tomato beds" means an 11-bed answer and an 18-bed answer falsify you identically. They should not. Eleven beds means your crossover estimate was off by one and your mechanism was fine. Eighteen means the compounding does not bite anywhere near where you thought it did, and the mechanism is what is wrong.
+
+Micah Kosasa wrote the version of this I would point you at: he says he would not consider himself wrong if each crop's count shifts by three or fewer in either direction. That is a decision made before seeing the answer, which is the only time it can be made honestly.
 
 ### What to carry into Stage 1.2
 
-Your third falsification condition is a specification for a Solver run, and you should build it as one. The workbook has the carrot and mesclun caps as named inputs; raising them and re-solving is a two-minute experiment that answers a question you have already written down. The difference between the profit at the real caps and the profit at raised caps is the shadow price of the cap — what one more allowed bed of that crop would be worth — and it is exactly the number your condition is asking about.
+Your $9,390 figure is now an acceptance test, and you should write it into the specification as one. A model that reproduces the optimal mix but returns something other than about $9,391 for the marginal cost of the eleventh tomato bed has a defect somewhere in the labor pricing, and you would not otherwise catch it — the mix can come out right for the wrong reason.
 
-One thing to decide before you build: put a band on the first condition. If the model returns 11 tomato beds, were you wrong? 13? Deciding now, while you cannot see the answer, is what makes the Stage 3 reflection worth writing.
+The second one is your third falsification condition, which is a Solver run: raise the carrot and mesclun caps as named inputs, re-solve, and see whether the four idle beds fill. The difference in profit between the two runs is the shadow price of the cap — what one more allowed bed of that crop would be worth. Getting that number out of your own workbook is a two-minute experiment that answers a question you wrote down two weeks ago.
 
 ---
 
