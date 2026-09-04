@@ -43,3 +43,28 @@ A running record of AI sessions that mattered — what I asked, what it got wron
   "sell out."
 - **How I caught it:** The three bullets are my own words; Claude
   only told me which of them could actually come out false.
+
+## 2026-09-03 — Stage 1.1 tolerance bands and review response
+- **Tool:** Claude
+- **What I asked:** Help deciding whether to put a tolerance band on my first
+  falsification condition, then review my revised brief and my replies to two review
+  pull requests.
+- **What it got right/wrong:** It laid out the trade honestly — a band buys robustness
+  by giving up sharpness, and a wider target carries less information in the one section
+  whose purpose is being killable — and I chose to decline the band. My instructor
+  overruled that with a better argument: under "more than 10," an 11-bed result and an
+  18-bed result falsify me identically, when one is a calibration error and the other
+  means the mechanism is wrong. I conceded and set the band at more than 13, with a
+  one-bed margin on the second condition for the near-optimal integer solutions GRG
+  branch-and-bound can return. Claude caught three things in my drafts: I had deleted
+  the "cost driver rather than a binding limit" clause that had just earned the rubric
+  point, my band prose said "one or two beds" while my threshold allowed three, and a
+  merged sentence in my pull request reply left the solver as the subject of "before
+  concluding." It also inspected the review file the second pull request proposed to add
+  and found it named a classmate, which is why I closed rather than merged.
+- **How I caught it:** The band decision was mine both times — first to decline it, then
+  to concede when the counter-argument beat my reason for holding out. I disclosed in
+  both review threads that I had known the published check figures the whole time, so
+  the bands were set on principle rather than as a blind calibration. I did not
+  independently verify Claude's three flags; I took them at face value and made the
+  edits.
