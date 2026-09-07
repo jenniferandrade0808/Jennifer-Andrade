@@ -24,7 +24,7 @@ Most people who add a tolerance add the same one everywhere. Matching the width 
 
 The brief is finished. Nothing more should go into it — and in particular, do not revise it once the model runs. If the model returns 10 tomato beds you were right; if it returns 12 you were right within your own band and you should say so; if it returns 16 you were wrong and that is the most interesting thing you will write in Stage 1.3.
 
-capabilities/marginal-analysis/ has no spec.md yet and the stage is due 6 September. Two things from this brief go straight into it: the $9,390 marginal cost of the eleventh tomato bed is an acceptance test, and your cap-raising experiment is a second Solver run. A model that reproduces the mix but returns the wrong marginal cost for bed 11 has a defect in the labor pricing that the mix alone will not reveal.
+capabilities/marginal-analysis/ has no spec.md yet and the stage is due 11 September. Two things from this brief go straight into it: the $9,390 marginal cost of the eleventh tomato bed is an acceptance test, and your cap-raising experiment is a second Solver run. A model that reproduces the mix but returns the wrong marginal cost for bed 11 has a defect in the labor pricing that the mix alone will not reveal.
 
 ---
 
