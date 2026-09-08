@@ -116,4 +116,28 @@ The workbook is organized into distinct regions:
 
 ## Audit Findings
 
-*To be completed after the workbook is built, per the five required audit checks (hand-check, Farm Profit Lab cross-check, dual Solver starting points, published check figures, formula/error inspection).*
+**1. q=1 Hand-Check — Pass.** Tomato labor hours at q=1 compute to exactly 99.00 hours (`1 × 2.50 × 36 × (1+0.10)^1`), verified live in the Validation sheet against the workbook's own formula, not a pasted value.
+
+**2. Farm Profit Lab Cross-Check — Pass, after correcting a real error.** The first pass at this check priced every marginal labor hour at the temp-worker rate ($17.36/hr) regardless of whether the farmer's 720-hour allocation was still available, giving $2,598.75 for tomato bed 1 and $4,311.48 for bed 5. Both were wrong: in a *standalone* schedule (tomatoes alone, no other crop competing for the farmer's time), those hours fall inside her untouched allocation and must be priced at `FARMER_HOURLY_RATE`, not the temp rate.
+
+Corrected:
+- Bed 1 (99.00 hrs, fully within the 720-hour farmer allocation): 99.00 × $34.7222 + $880 fertilizer = **$4,317.50**.
+- Bed 5 (cumulative hours run from 527.08 to 724.73, crossing the 720-hour line mid-bed): 192.92 hrs at the farmer rate + 4.73 hrs at the temp rate + $880 fertilizer = **$7,660.83**.
+
+This is the same mechanism that makes the bed-11 acceptance figure ($9,390.72) correct in the *full* 10/20/30 mix: there, the farmer's 720 hours are already exhausted by the rest of that production before tomato bed 11 is reached, so its entire marginal cost is priced at the temp rate. A standalone single-crop schedule and a mixed-portfolio marginal cost are different calculations that happen to share a rate table — conflating them is the error this check exists to catch.
+
+**3. Solver Path Independence — Pass.** Baseline Primary run from (0,0,0) converges to (10, 20, 30), profit $42,761.66. Run again from (20,0,0) — an infeasible starting point on its own (20 tomato beds alone would need over 12,000 labor hours, far beyond the 6,480-hour total capacity) — re-optimizes back to the identical (10, 20, 30) global optimum. No alternate local optimum was found.
+
+**4. Published Check Figures — Pass.**
+
+| Check | Target | Actual |
+|---|---|---|
+| Optimal mix | 10 / 20 / 30 (60 beds, 4 idle) | 10 / 20 / 30 (60 beds, 4 idle) |
+| Season profit | $42,762 (±$1) | $42,761.66 |
+| Marginal cost, tomato bed 11 | $9,390.72 (±$1) | $9,390.72 |
+| Isolated carrot shadow price | ≈$352 | $352.50 (cap raised to 21; profit $43,114.16) |
+| Isolated mesclun shadow price | ≈$246 | $246.48 (cap raised to 31; profit $43,008.14) |
+
+**5. Formula Integrity — Pass.** Every calculated cell in the Inputs, Model, Validation, and Outputs sheets contains a live formula referencing named ranges. The only plain (non-formula) values are the twelve Solver changing cells (`q_t, q_c, q_m` × four scenarios), which is correct — they are decisions, not calculations. No error cells (`#REF!`, `#DIV/0!`, `#VALUE!`, `#NAME?`) are present.
+
+**Additional finding — Joint Capacity Run.** With both caps raised together (carrot to 24, mesclun to 34), the optimizer uses **all 64 beds** — the 4 beds idle in the baseline mix fill completely, for a profit of $43,900.49 (+$1,138.83 over baseline). This empirically confirms the Stage 1 hypothesis: the carrot and mesclun bed caps, not their underlying economics, were what left those 4 beds idle. Because both caps were raised simultaneously, this run cannot say how the gain splits between the two crops individually — that attribution is exactly what checks 2 and the isolated shadow-price runs above answer instead.
