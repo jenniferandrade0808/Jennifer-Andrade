@@ -11,17 +11,17 @@ This model determines the profit-maximizing bed allocation across tomatoes, carr
 | `TOMATO_BED_CAP` | 20 | beds | Case File |
 | `TOMATO_BASE_LABOR` | 2.50 | hrs/week/bed | Case File |
 | `TOMATO_FERTILIZER` | 880 | $/bed | Case File |
-| `TOMATO_DIM_PCT` | 10 | % | Case File |
+| `TOMATO_DIM_PCT` | 0.10 | share (decimal fraction, not percentage points — the workbook computes `(1+TOMATO_DIM_PCT)^q`) | Case File |
 | `CARROT_PRICE` | 2,094 | $/bed | Case File |
 | `CARROT_BED_CAP` | 20 | beds | Case File |
 | `CARROT_BASE_LABOR` | 5/6 (0.8333...) | hrs/week/bed | Case File prints 0.833 (rounded); exact 5/6 used so profit hits the check figure to the dollar |
 | `CARROT_FERTILIZER` | 440 | $/bed | Case File |
-| `CARROT_DIM_PCT` | 2.5 | % | Case File |
+| `CARROT_DIM_PCT` | 0.025 | share (decimal fraction, not percentage points) | Case File |
 | `MESCLUN_PRICE` | 2,700 | $/bed | Case File |
 | `MESCLUN_BED_CAP` | 30 | beds | Case File |
 | `MESCLUN_BASE_LABOR` | 1.25 | hrs/week/bed | Case File |
 | `MESCLUN_FERTILIZER` | 880 | $/bed | Case File |
-| `MESCLUN_DIM_PCT` | 1.25 | % | Case File |
+| `MESCLUN_DIM_PCT` | 0.0125 | share (decimal fraction, not percentage points) | Case File |
 | `WEEKS` | 36 | weeks | Case File |
 | `TOTAL_BED_CAP` | 64 | beds | Case File |
 | `FARMER_SALARY` | 50,000 | $/season | Case File |
@@ -40,15 +40,18 @@ This model determines the profit-maximizing bed allocation across tomatoes, carr
 
 ## Structure
 
-The workbook is organized into distinct regions:
+*Updated to match what was actually built, per Stage 1.2 review — the four scenarios are implemented as adjacent columns on one `Model` sheet, not as separate sheets/regions. This is a tighter design than originally specified: all four scenarios share one identical row-wise formula chain, so the only thing that differs column to column is which named cap feeds the carrot/mesclun constraint checks.*
 
-- **Inputs Region:** Houses the named contract table above, ensuring every baseline and scenario parameter is cleanly referenced by name rather than cell coordinates.
-- **Cost & Labor Schedule:** Calculates compounding labor hours per bed for each crop using each crop's own base-labor and diminishing-returns rate.
-- **Primary Optimization Region:** The baseline Solver setup, maximizing total profit subject to baseline bed caps (20/20/30), the 64-bed total capacity, and labor constraints.
-- **Isolated Carrot Shadow Price Run:** A secondary model region incorporating the carrot-only cap increase (`CARROT_BED_CAP_ISOLATED` = 21, mesclun held at 30), re-solving to isolate the marginal profit delta for carrots alone.
-- **Isolated Mesclun Shadow Price Run:** A tertiary model region incorporating the mesclun-only cap increase (`MESCLUN_BED_CAP_ISOLATED` = 31, carrot held at 20), re-solving to isolate the marginal profit delta for mesclun alone.
-- **Joint Capacity Absorption Run:** A quaternary model region incorporating the joint raised caps (`CARROT_BED_CAP_JOINT` = 24, `MESCLUN_BED_CAP_JOINT` = 34) to test whether the 4 idle beds get absorbed when both caps are relaxed together; attribution across crops (if the result is a split) is addressed in Audit Findings, not assumed here.
-- **Validation Rules Region:** Contains the acceptance tests below.
+The workbook has four sheets: `Inputs`, `Model`, `Validation`, `Outputs`.
+
+- **Inputs sheet:** Houses the named contract table above, ensuring every baseline and scenario parameter is cleanly referenced by name rather than cell coordinates.
+- **Model sheet:** One row-wise formula chain (decision cells → labor hours per crop → labor aggregation and cost → fertilizer cost → revenue → profit → constraint checks), repeated identically across four columns:
+  - **Column C — Primary:** baseline caps (`TOMATO_BED_CAP`, `CARROT_BED_CAP`, `MESCLUN_BED_CAP` = 20/20/30).
+  - **Column D — Isolated Carrot Shadow Price Run:** carrot constraint uses `CARROT_BED_CAP_ISOLATED` (21); mesclun stays at `MESCLUN_BED_CAP` (30).
+  - **Column E — Isolated Mesclun Shadow Price Run:** mesclun constraint uses `MESCLUN_BED_CAP_ISOLATED` (31); carrot stays at `CARROT_BED_CAP` (20).
+  - **Column F — Joint Capacity Absorption Run:** carrot uses `CARROT_BED_CAP_JOINT` (24), mesclun uses `MESCLUN_BED_CAP_JOINT` (34); tests whether the 4 idle beds get absorbed when both caps are relaxed together. Attribution across crops, since both caps move at once, is addressed in Audit Findings, not assumed here.
+- **Validation sheet:** Contains the acceptance tests below, each pulling live from the Model sheet.
+- **Outputs sheet:** The summary table below, also pulling live from the Model sheet.
 
 ## Calculation Logic
 
