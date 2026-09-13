@@ -68,3 +68,47 @@ A running record of AI sessions that mattered — what I asked, what it got wron
   the bands were set on principle rather than as a blind calibration. I did not
   independently verify Claude's three flags; I took them at face value and made the
   edits.
+
+## 2026-09-08 — Stage 1.2 workbook audit and Solver persistence fix
+- **Tool:** Claude
+- **What I asked:** My instructor's review found the committed workbook's decision cells
+  at 0/0/0 despite my having run Solver — help resolve it and verify the fix.
+- **What it got right/wrong:** My instructor's review caught that the committed workbook
+  asserted its own failure — correct formulas, but decision cells all zero, almost
+  certainly Solver's "Restore Original Values" or an unsaved solve. Claude proposed an
+  independent Python brute-force search over the integer solution space so the fix
+  could be verified without relying on the Excel GUI alone.
+- **How I caught it:** I re-ran Solver myself, kept the solution this time, and
+  confirmed the result matched both my instructor's recomputation and the brute-force
+  script exactly across all four scenarios — Primary $42,761.66 (10/20/30), Isolated
+  Carrot $43,114.16, Isolated Mesclun $43,008.14, Joint $43,900.49 (10/23/31) — before
+  we committed.
+
+## 2026-09-11 to 2026-09-13 — Stage 1.3 analysis, figures, and memo
+- **Tool:** Claude
+- **What I asked:** Assemble the analysis document, generate the two required figures,
+  resolve the "grow at a loss" paradox, and draft the recommendation memo.
+- **What it got right/wrong:** Claude generated the MC-vs-price figures and verified
+  them against nine already-established check figures before plotting. My instructor's
+  Stage 1.3 review then caught that my draft resolution of the "grow at a loss" paradox
+  had tested marginal cost at the last bed rather than average variable cost across the
+  whole block — the correct statistic for a shutdown decision. Separately, Claude caught
+  an overstatement in my own rewritten conclusion, which implied AVC crossing price was
+  what stopped production, when tomato actually stops on P=MC and carrots/mesclun stop
+  on their bed caps.
+- **How I caught it:** I independently recomputed the AVC figures myself (Carrot
+  $1,918.45, Mesclun $2,430.74) rather than taking my instructor's numbers on faith,
+  confirming both crops clear price on the correct test.
+
+## 2026-09-13 — Stage 3 Reflection: AI Collaboration, External Review, and Verification
+
+Across Stages 1.2 and 1.3, AI functioned effectively as a calculation engine and structural editor, but maintaining analytical precision required active verification at every handoff.
+
+AI proved most valuable for technical execution: generating the Python brute-force script to evaluate the integer solution space and rendering high-resolution Matplotlib curves for analysis/figures/. Rather than accepting Solver outputs blindly, I used this script to verify each scenario's profit independently—confirming the $42,761.66 primary baseline, $43,114.16 for isolated carrots, $43,008.14 for isolated mesclun, and $43,900.49 for the 64-bed joint run.
+
+However, the analysis required two critical conceptual corrections across human and machine review:
+1. Marginal Cost vs. Average Variable Cost: In Section 4, my draft initially conflated marginal cost at the final bed with the shutdown rule. My instructor's Stage 1.3 review flagged that testing price against MC does not answer the shutdown question. Rather than accepting the feedback passively, I independently recomputed the variable cost schedules across the full blocks, verifying that Carrot AVC at 20 beds ($1,918.45) and Mesclun AVC at 30 beds ($2,430.74) both comfortably sit below price.
+2. Economic Causation vs. Coincidence: In my redrafted conclusion, I inadvertently suggested that the optimal plan halted because AVC crossed market price. Claude caught this overstatement before commitment, pointing out that stopping points were dictated solely by the tomato P=MC crossing and physical bed caps, while the fact that AVC cleared price simply justified operating rather than shutting down.
+
+This engagement demonstrated that while models excel at rapid computation, reconciling economic mechanisms across external feedback and automated drafting demands rigorous, independent auditing.
+*(264 words)*
