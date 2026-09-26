@@ -1,0 +1,3 @@
+# Research Brief: Kauai Beef Supply and Processing Labor
+
+Research Question: Why does Kauai remain heavily dependent on imported food and protein (consistent with the statewide 85 to 90 percent benchmark) despite maintaining 42,345 acres in pasture and a standing inventory of 13,893 cattle and calves? My focus is that maritime supply disruptions do not create this vulnerability; they simply expose an ongoing, structural conversion failure. The binding constraint is not pasture acreage or livestock head, but trained processing labor. Slaughter and butchery work involves high physical disutility and must compete against a high hospitality wage floor.
