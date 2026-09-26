@@ -112,3 +112,25 @@ However, the analysis required two critical conceptual corrections across human 
 
 This engagement demonstrated that while models excel at rapid computation, reconciling economic mechanisms across external feedback and automated drafting demands rigorous, independent auditing.
 *(264 words)*
+
+## 2026-09-24 to 2026-09-26 — Research paper topic check, spec, and first verification pass
+- **Tool:** Claude (reviewer), plus a second AI tool I used to draft spec revisions
+- **What I asked:** Review my topic-check message to my instructor, post it as a GitHub issue
+  (#7), then review my research spec through several rounds and check the BLS wage data.
+- **What it got right/wrong:** Claude posted the topic check as an issue without first checking
+  the assignment page, which says the way to ask for a read is to commit the brief and push.
+  My instructor answered anyway (PR #8). The spec review shaped the hypothesis: my own
+  figure showed the herd covers only about a third of island beef demand even with unlimited
+  labor, so the thesis became sequential constraints (labor binds first, herd second). Calf
+  exports became the rival I test, with a retained-calf scenario (Series B2) and backlog
+  evidence under Falsification Condition 1. In the spec rounds, the other tool presented unsourced
+  claims as "verified industry facts" and adjusted Series B1 to 20–25 head/week so it sat just
+  above Series C. It also wrote what the legislative testimony "documents" before any
+  testimony had been read, and stated that BLS suppresses butcher wages for the Hawaii / Kauai
+  nonmetro area.
+- **How I caught it:** Claude flagged the B1 adjustment as retrofitted, so I went back to the
+  published census figure (1,911 head) and labeled the gap as a limitation. For the wage claim,
+  Claude pulled the May 2025 OEWS data from the BLS API: the lines are not suppressed
+  (51-3021 median $24.39, 51-3023 $18.90, 40–100 workers), so the spec's statewide-proxy plan
+  was wrong. The BLS area definitions also showed that the nonmetro area is Hawaii + Kauai
+  counties only (Maui is its own metro area), not the three counties the spec listed.
