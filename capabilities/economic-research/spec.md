@@ -68,3 +68,33 @@ The primary labor-scarcity hypothesis will be falsified if:
 - **Criterion 3:** Every quantitative claim in the text and figure traces directly to an official cited source (USDA NASS, HDOA, BLS OEWS, DBEDT, CTAHR) or is explicitly marked as a labeled operational assumption.
 - **Criterion 4:** The empirical analysis explicitly evaluates and tests the rival calf-export hypothesis against the primary labor bottleneck using public legislative backlog testimony alongside the comparison between Series B2 and Series C.
 - **Criterion 5:** The deliverable chart is generated and stored in figures/figure1_capacity_gap.png and is actively referenced and interpreted within the analytical prose.
+
+---
+
+# Specification Revision: Triggering of Condition 1 and Inversion of Primary Constraint
+
+- **Date:** October 1, 2026
+- **Author:** Jennifer Andrade
+- **Status:** Triggered / Revised
+- **Reference Issue:** Issue #7 / PR #8
+
+---
+
+## 1. Trigger Event: Condition 1 Verification
+On October 1, 2026, qualitative operational data gathered from plant operations at an inspected Kauaʻi commercial facility formally triggered **Condition 1** of the research specification:
+* *Condition 1 Parameter:* The midstream labor constraint hypothesis is falsified if the processing facility operates with open slaughter slots, reports scheduling lead times under two weeks, maintains adequate cooler clearance, and attributes operating frequency strictly to inbound livestock deliveries.
+* *Observed Operational Metrics:*
+  - Booking lead times average ~1 week.
+  - Operations run 2 days/week ("with what we currently have coming in, twice a week is all we need").
+  - Cooler space accommodates client-selected dry aging (14–28 days) without capacity displacement.
+  - USDA FSIS inspection coverage is active and non-restrictive (~99% inspected throughput).
+
+## 2. Hypothesis Inversion & Structural Reframing
+* **Prior Working Hypothesis:** Downstream labor shortages (cutter deficit, wage suppression relative to resort hospitality) and chiller constraints act as the primary bottleneck capping Kauaʻi beef supply.
+* **Revised Empirical Hypothesis:** The binding constraint is upstream at the cow-calf junction, driven by the microeconomic opportunity cost and comparative advantage of exporting weaned calves (3,707 head under 500 lbs vs. 1,911 cattle 500+ lbs, USDA 2022 Table 11). Downstream processing currently operates with unutilized capacity (slack).
+* **Sequential Dynamic:** Downstream labor and cooler capacity become binding sequentially only after policy successfully alters retention economics and doubles weekly processing demand.
+
+## 3. Action Items Completed
+1. Full anonymization of plant identity and operational personnel to maintain double-anonymous grading compliance.
+2. Replacement of descriptive assertions with USDA Table 11 calf/cattle breakdown and Leung & Loke (2008) food import baseline.
+3. Integration of BLS OEWS May 2025 nonmetropolitan wage disparity ($18.90 slaughter vs. $20.65–$26.38 hospitality).
