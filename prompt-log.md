@@ -134,3 +134,20 @@ This engagement demonstrated that while models excel at rapid computation, recon
   (51-3021 median $24.39, 51-3023 $18.90, 40–100 workers), so the spec's statewide-proxy plan
   was wrong. The BLS area definitions also showed that the nonmetro area is Hawaii + Kauai
   counties only (Maui is its own metro area), not the three counties the spec listed.
+
+## AI Session Log: 2026-10-01
+
+- **Tool:** Gemini (initial drafting & restructuring) / Claude (critical review & validation)
+- **What I Asked:**
+  1. Evaluate primary plant operational email data against the pre-research specification to test Condition 1.
+  2. Refactor Section 3 of the draft to reclassify downstream processing as operational slack and model upstream feeder calf export flows.
+  3. Anonymize the draft text for double-anonymous grading compliance and convert to unformatted plain text.
+  4. Perform an explicit Net Present Value (NPV) calculation comparing continental feeder calf export versus 24-month island pasture finishing, incorporating hurdle rates, mortality risk, and BLS wage data.
+- **What Came Back & Collaborative Refinements:**
+  - *Spec Condition Integrity:* Gemini generated a revised specification section that introduced post-hoc criteria ("lead times under two weeks," "cooler clearance"). Claude flagged that this paraphrased my original pre-registered text. I reviewed the original specification file, rejected the AI paraphrase, restored Condition 1 verbatim, and moved cooler and inspection metrics into a separate supplementary findings section.
+  - *Attribution Accuracy:* Claude flagged that the revision draft stated "independent producers report" 1-week lead times. I updated the wording to "the facility reports," ensuring the attribution accurately reflects the plant manager as the sole source.
+  - *Wage Classification & Metric Verification:* Gemini labeled wage figures as "means" from a national industry-wide code. Claude caught that $18.90 is the median hourly wage ($39,310 median annual) and $19.91 is the mean ($41,410) for the Hawaiʻi / Kauaʻi nonmetropolitan area. I verified these figures against the BLS OEWS May 2025 nonmetropolitan tables and corrected the manuscript text accordingly.
+  - *Margin Comparison & NPV Arithmetic:* Gemini initially asserted that local finishing was "competitive or superior" based on overlapping undiscounted ranges ($1,050–$1,150 export vs. $1,000–$1,300 local). Claude pointed out that this missed the two-year time horizon and mortality risk, and noted that the gap was wider than stated ($137–$393 present value, scaling to $165–$475 in nominal harvest-date dollars). I implemented the two-year discounting step ($1 / 1.08^2 \times 0.97 \approx 0.832$), derived the risk-adjusted local NPV ($757–$923), and widened the proposed policy floor to $5.05–$5.60/lb on a 560 lb carcass.
+  - *Citation Integrity:* Gemini incorrectly cited the HDOA 2020 Land Use Baseline for the 85–90% food import metric. Claude caught the attribution error, and I corrected the citation to Leung & Loke (2008). Claude also flagged that USDA Table 11 defines categories by live weight (<500 lbs vs. 500+ lbs) rather than end-use, which I updated in the methodology and findings.
+  - *Anonymity Compliance:* Kept all personal names and the facility's proprietary brand name out of all repository files and commit messages to ensure strict compliance with double-anonymous grading rules. Primary correspondence notes are retained in offline personal files rather than the repository.
+- **Final Disposition:** Committed corrected spec revision (e83bd71) and draft revision 4 (9af6de4). The explicit falsification of Condition 1 documents empirical pre-registration execution.

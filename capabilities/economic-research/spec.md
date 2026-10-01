@@ -84,7 +84,7 @@ The original specification established the following pre-research falsification 
 
 Primary operational data collected on October 1, 2026, met each parameter of this condition word-for-word:
 - **Persistent Idle Labor Capacity:** Cutting staff maintain secondary employment outside the facility. This dual employment reflects an operational adjustment to low island harvest volume, rather than an exogenous labor shortage restricting slaughter availability.
-- **Open Slaughter Slots Without Booking Backlogs:** Independent producers report scheduling lead times of approximately one week, with open slots regularly available for commercial herds as well as smallholders harvesting 1 to 2 head annually.
+- **Open Slaughter Slots Without Booking Backlogs:** The facility reports scheduling lead times of approximately one week, with open slots regularly available for commercial herds as well as smallholders harvesting 1 to 2 head annually.
 - **Operational Volume Constrained by Cattle Deliveries Rather Than Cutting Labor Hands:** The facility operates slaughter and butchering shifts only two days per week, with management explicitly confirming that operating frequency is governed strictly by inbound livestock volume ("with what we currently have coming in, twice a week is all we need").
 
 ### 2. Supplementary Operational Findings
