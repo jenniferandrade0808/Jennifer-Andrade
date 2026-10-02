@@ -67,7 +67,7 @@ The primary labor-scarcity hypothesis will be falsified if:
 - **Criterion 2:** Double-anonymous compliance is fully maintained: no personal names, company names, specific facility identities, or repository URLs appear in text, captions, footnotes, or bibliography.
 - **Criterion 3:** Every quantitative claim in the text and figure traces directly to an official cited source (USDA NASS, HDOA, BLS OEWS, DBEDT, CTAHR) or is explicitly marked as a labeled operational assumption.
 - **Criterion 4:** The empirical analysis explicitly evaluates and tests the rival calf-export hypothesis against the primary labor bottleneck using public legislative backlog testimony alongside the comparison between Series B2 and Series C.
-- **Criterion 5:** The deliverable chart is generated and stored in figures/figure1_capacity_gap.png and is actively referenced and interpreted within the analytical prose.
+- **Criterion 5:** The deliverable chart is generated and stored in analysis/figures/figure1_bovine_allocation_capacity.png and is actively referenced and interpreted within the analytical prose.
 
 ---
 
@@ -96,3 +96,6 @@ Beyond the pre-specified conditions, the operational audit identified two additi
 - **Prior Hypothesis:** Midstream conversion bottlenecks (scarcity of skilled meat cutters, wage suppression relative to resort hospitality, and cold-storage deficits) cap domestic beef supply.
 - **Revised Empirical Hypothesis:** The binding constraint is upstream at the cow-calf marketing junction. Cow-calf operators face lower risk-adjusted returns and working-capital friction when finishing cattle on island pasture relative to exporting weaned calves (3,707 calves <500 lbs vs. 1,911 cattle 500+ lbs, USDA 2022 Table 11). Midstream processing currently operates with unutilized capacity (slack).
 - **Sequential Policy Dynamic:** Midstream conversion infrastructure transitions to a binding constraint sequentially only after upstream retention policies successfully expand live animal deliveries beyond current two-day operating capacity.
+
+### 4. October 2 Addendum: The Infrastructure Ceiling
+A follow-up operational audit on October 2, 2026, confirmed that while cooler space does not cap the *current* low volume, physical hanging rail capacity—along with wastewater limits and equipment wear—creates a hard ceiling at approximately 25 head per week. Midstream slack is therefore shallow (estimated at ~9 unutilized head per week).
