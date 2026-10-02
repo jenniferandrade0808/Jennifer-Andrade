@@ -20,7 +20,7 @@ CEILING = "#b3261e"
 
 labels = [
     "Upstream Outflow:\nWeaned Calf Exports",
-    "Upstream Retained:\nAdult Cattle &\nCalves 500+ lb",
+    "Cattle & Calves\n500+ lb Sold",
     "Current Plant\nThroughput:\nInspected Slaughter",
     "Theoretical Plant\nCapacity Ceiling",
 ]
