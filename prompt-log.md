@@ -177,3 +177,7 @@ This engagement demonstrated that while models excel at rapid computation, recon
   - *Power Grid Defense:* Claude pointed out that the processing plant also requires electricity during a hurricane. I rewrote the defense to emphasize that live cattle hold their value during outages while a frozen stockpile spoils immediately, and I linked this to Phase 2 grants for backup generation.
   - *Length Reductions:* Claude suggested areas to cut for length. Following those suggestions, I aggressively cut the text (removed the Section 1 framing fluff, shortened the FSIS bullet, dropped mean-wage figures, and minimized the Conclusion) to bring the draft under 1,000 words.
 - **Final Disposition:** Draft shortened to ~985 words, with all required components present. Ready to push.
+
+## Closing Reflection
+
+Closing Reflection: AI was highly effective in synthesizing complex data, such as AMS feeder prices and NPV calculations, into structured economic frameworks, and suggesting areas to condense so I could manually cut the manuscript to meet strict length constraints. However, the AI occasionally hallucinated facts. For example, Gemini initially supplied an $18.33 fast-food wage. Claude flagged this discrepancy against BLS data; I then independently verified on the BLS site that the actual median was $17.38 and removed the row entirely.
