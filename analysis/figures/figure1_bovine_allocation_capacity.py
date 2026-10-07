@@ -54,10 +54,20 @@ slack = plant_max_capacity - observed_slaughter
 bx = bars[2].get_x() + bars[2].get_width() + 0.06
 ax.annotate("", xy=(bx, observed_slaughter), xytext=(bx, plant_max_capacity),
             arrowprops=dict(arrowstyle="|-|", color=INK_MUTED, lw=1.1, mutation_scale=4), zorder=5)
-ax.text(bars[2].get_x() + bars[2].get_width() / 2, plant_max_capacity + 16,
+ax.text(bars[2].get_x() + bars[2].get_width() / 2 + 0.3, plant_max_capacity + 16,
         f"Midstream Slack Capacity\n= Plant Ceiling − Current Slaughter\n(~{slack:.0f} head/week unutilized)",
         ha="center", va="center", fontsize=8.2, color=INK,
         bbox=dict(boxstyle="round,pad=0.35", fc="white", ec=GRID, lw=0.8), zorder=6)
+
+# Retention threshold: share of exported calves that fills the remaining slack
+retention_pct = slack / calf_exports * 100
+ax.annotate(f"Plant Capacity Ceiling Reached at ~{retention_pct:.0f}% Calf Retention\n"
+            f"(~{slack:.0f} of {calf_exports:.1f} exported calves/wk)",
+            xy=(bars[2].get_x() + 0.08, plant_max_capacity), xytext=(1.45, 60),
+            ha="center", va="center", fontsize=8.6, color=CEILING, fontweight="bold",
+            arrowprops=dict(arrowstyle="->", color=CEILING, lw=1.2,
+                            connectionstyle="arc3,rad=0"),
+            bbox=dict(boxstyle="round,pad=0.35", fc="white", ec=CEILING, lw=0.9), zorder=7)
 
 ax.set_title("Figure 1: Kauaʻi Weekly Bovine Allocation vs. Inspected Processing Capacity",
              fontsize=12, color=INK, pad=14)
