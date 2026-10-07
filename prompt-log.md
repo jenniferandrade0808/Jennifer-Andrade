@@ -181,3 +181,7 @@ This engagement demonstrated that while models excel at rapid computation, recon
 ## Closing Reflection
 
 Closing Reflection: AI was highly effective in synthesizing complex data, such as AMS feeder prices and NPV calculations, into structured economic frameworks, and suggesting areas to condense so I could manually cut the manuscript to meet strict length constraints. However, the AI occasionally hallucinated facts. For example, Gemini initially supplied an $18.33 fast-food wage. Claude flagged this discrepancy against BLS data; I then independently verified on the BLS site that the actual median was $17.38 and removed the row entirely.
+
+## 2026-10-06 — Instructor review (PR #11) revisions
+
+2026-10-06: Addressed professor feedback from PR 11. Used AI to assist with calculating the walking-reserve arithmetic and to identify the standard AUE displacement for pasture opportunity costs (0.75 pairs). Rewrote the brief and Section 3 to clarify the sequential constraint narrative, specifically that the upstream constraint binds first and midstream capacity binds at 13 percent retention. AI handled file updates, added missing APA references for DBEDT, USDA ERS, and USDA NRCS, and regenerated the final PDF.
